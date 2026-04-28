@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import ConfirmationClient from './confirmation-client';
 
 export const dynamic = 'force-dynamic';
-export const metadata = { title: 'Order confirmed · waxwick' };
+export const metadata = { title: 'Order confirmed · Wic & Whisper' };
 
 export default function Page() {
   return (

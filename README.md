@@ -1,6 +1,6 @@
-# waxwick.in
+# wicwhisper.com
 
-Production-ready D2C site for **waxwick** — handcrafted scented candles, hand-poured in Bangalore.
+Production-ready D2C site for **Wic & Whisper** — handcrafted scented candles, hand-poured in Bangalore.
 
 Built on Next.js 14 (App Router) + Tailwind + Razorpay + Meta CAPI. **No database** — products live in `lib/products.ts`, orders live in Razorpay.
 
@@ -59,9 +59,9 @@ See [`.env.local.example`](./.env.local.example).
 1. Push this repo to GitHub.
 2. Import it on [vercel.com/new](https://vercel.com/new).
 3. Paste the env vars from `.env.local.example` into the Vercel project’s settings (Production + Preview).
-4. After the first deploy, point `waxwick.in` at the project under Domains.
-5. In the Razorpay dashboard, register your webhook URL: `https://waxwick.in/api/webhook/razorpay` with events `payment.captured` and `order.paid`.
-6. In Meta Events Manager, paste the Pixel ID and a Conversions API access token, and add `https://waxwick.in/order-confirmation` to your test event URLs while validating CAPI.
+4. After the first deploy, point `wicwhisper.com` at the project under Domains.
+5. In the Razorpay dashboard, register your webhook URL: `https://wicwhisper.com/api/webhook/razorpay` with events `payment.captured` and `order.paid`.
+6. In Meta Events Manager, paste the Pixel ID and a Conversions API access token, and add `https://wicwhisper.com/order-confirmation` to your test event URLs while validating CAPI.
 
 ## Source of truth
 

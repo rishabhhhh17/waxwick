@@ -21,16 +21,16 @@ const display = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: 'waxwick — handcrafted scented candles, made in India',
+  title: 'Wic & Whisper — handcrafted scented candles, made in India',
   description:
     'Soy-wax candles, hand-poured in Bangalore. Toxin-free, slow-burn, natural fragrance. Coffee Roast, Sandalwood, Saffron, Latte Collection, Bespoke Diwali.',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://waxwick.in'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://wicwhisper.com'),
   openGraph: {
-    title: 'waxwick — handcrafted scented candles',
+    title: 'Wic & Whisper — handcrafted scented candles',
     description:
       'Soy-wax candles, hand-poured in Bangalore. Natural fragrance, slow-burn, toxin-free.',
-    url: 'https://waxwick.in',
-    siteName: 'waxwick',
+    url: 'https://wicwhisper.com',
+    siteName: 'Wic & Whisper',
     type: 'website',
   },
 };

@@ -1,4 +1,4 @@
-export const metadata = { title: 'Terms · waxwick' };
+export const metadata = { title: 'Terms · Wic & Whisper' };
 
 export default function TermsPage() {
   return (
@@ -9,7 +9,7 @@ export default function TermsPage() {
           <p>Prices are in INR and inclusive of GST. We reserve the right to update pricing without prior notice.</p>
           <p>Orders are confirmed once payment is captured by Razorpay. We hand-pour to order; cancellations are accepted up to 6 hours after order placement.</p>
           <p>Burn responsibly: never leave a lit candle unattended, keep away from flammable materials and children, and always trim the wick to 5 mm before each burn.</p>
-          <p>By placing an order on waxwick.in, you agree to these terms.</p>
+          <p>By placing an order on wicwhisper.com, you agree to these terms.</p>
         </div>
       </div>
     </div>

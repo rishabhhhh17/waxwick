@@ -92,7 +92,7 @@ export default function CheckoutPage() {
         key,
         amount: data.amount,
         currency: data.currency,
-        name: 'waxwick',
+        name: 'Wic & Whisper',
         description: 'Hand-poured candles',
         order_id: data.razorpay_order_id,
         prefill: { name: form.name, email: form.email, contact: form.phone },

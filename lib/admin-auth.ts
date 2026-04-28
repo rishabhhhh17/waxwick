@@ -1,7 +1,7 @@
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 
-const COOKIE = 'waxwick_admin';
+const COOKIE = 'wicwhisper_admin';
 
 function secret() {
   const s = process.env.ADMIN_SESSION_SECRET;

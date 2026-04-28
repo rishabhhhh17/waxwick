@@ -18,7 +18,7 @@ export default function HomePage() {
       <section className="relative h-[88vh] min-h-[640px] max-h-[900px] w-full overflow-hidden">
         <Image
           src="/images/lifestyle-tray.jpg"
-          alt="Three lit waxwick candles on a brass tray"
+          alt="Three lit Wic & Whisper candles on a brass tray"
           fill
           priority
           sizes="100vw"
@@ -240,7 +240,7 @@ export default function HomePage() {
             <Image src="/images/lifestyle-bw.jpg" alt="Hand pouring a candle" fill sizes="(min-width:768px) 50vw, 100vw" className="object-cover" />
           </div>
           <div>
-            <span className="text-[12px] uppercase tracking-[0.22em] text-ember-200 font-medium">Why waxwick</span>
+            <span className="text-[12px] uppercase tracking-[0.22em] text-ember-200 font-medium">Why Wic &amp; Whisper</span>
             <h2 className="mt-3 font-display text-[36px] md:text-[56px] leading-[1.05] tracking-[-0.015em]">
               Made by hand,<br />from start to scent.
             </h2>

@@ -128,9 +128,9 @@ export default function Navbar() {
           {/* Logo — left-aligned, in flow */}
           <Link
             href="/"
-            className="font-display text-[26px] md:text-[28px] tracking-[-0.01em] text-ink shrink-0 leading-none whitespace-nowrap"
+            className="font-display text-[24px] md:text-[26px] tracking-[-0.01em] text-ink shrink-0 leading-none whitespace-nowrap"
           >
-            wax<span className="italic text-ember-500">wick</span><span className="text-ember-500">.</span>
+            Wic <span className="italic text-ember-500">&amp;</span> Whisper<span className="text-ember-500">.</span>
           </Link>
 
           {/* Desktop primary nav — between logo and utilities */}
@@ -253,8 +253,8 @@ export default function Navbar() {
           )}
         >
           <div className="px-5 h-[68px] flex items-center justify-between border-b border-cream-200">
-            <Link href="/" onClick={() => setMobile(false)} className="font-display text-2xl tracking-tight">
-              wax<span className="italic text-ember-500">wick</span><span className="text-ember-500">.</span>
+            <Link href="/" onClick={() => setMobile(false)} className="font-display text-2xl tracking-tight whitespace-nowrap">
+              Wic <span className="italic text-ember-500">&amp;</span> Whisper<span className="text-ember-500">.</span>
             </Link>
             <button onClick={() => setMobile(false)} aria-label="Close menu" className="p-2 -mr-2 rounded-full hover:bg-cream-100">
               <X className="w-5 h-5" />

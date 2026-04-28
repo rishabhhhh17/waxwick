@@ -118,7 +118,7 @@ export default function ConfirmationClient() {
         <div className="mt-10 grid sm:grid-cols-3 gap-4">
           <Step icon={<Sparkles className="w-4 h-4" />} t="Hand poured" d="We pour your candle within 48 hours." />
           <Step icon={<Truck className="w-4 h-4" />} t="Ships to you" d="Tracked across India in 3–5 working days." />
-          <Step icon={<Mail className="w-4 h-4" />} t="Need help?" d={`Email hello@waxwick.in with order ID ${params.orderId.slice(-8)}.`} />
+          <Step icon={<Mail className="w-4 h-4" />} t="Need help?" d={`Email hello@wicwhisper.com with order ID ${params.orderId.slice(-8)}.`} />
         </div>
 
         <div className="mt-12 text-center">

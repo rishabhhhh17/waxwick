@@ -55,6 +55,6 @@ export const useCart = create<CartState>()(
       subtotalPaise: () =>
         get().lines.reduce((a, l) => a + l.unit_price_paise * l.qty, 0),
     }),
-    { name: 'waxwick-cart-v1' },
+    { name: 'wicwhisper-cart-v1' },
   ),
 );

@@ -143,7 +143,7 @@ export default function ProductsClient() {
                 Not sure which scent fits your room?
               </h2>
               <p className="mt-3 text-clay-700 max-w-[52ch] mx-auto">
-                Email <a href="mailto:hello@waxwick.in" className="underline">hello@waxwick.in</a> with the room and the mood — we’ll recommend a candle in one reply.
+                Email <a href="mailto:hello@wicwhisper.com" className="underline">hello@wicwhisper.com</a> with the room and the mood — we’ll recommend a candle in one reply.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <Link href="/products?c=heritage-gifting" className="btn-primary">Shop gift duos <ArrowRight className="w-4 h-4 ml-2" /></Link>

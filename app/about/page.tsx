@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const metadata = { title: 'Our story · waxwick' };
+export const metadata = { title: 'Our story · Wic & Whisper' };
 
 export default function AboutPage() {
   return (
@@ -12,11 +12,11 @@ export default function AboutPage() {
           A small studio,<br />a quiet flame.
         </h1>
         <div className="mt-10 relative aspect-[16/10] rounded-xl2 overflow-hidden">
-          <Image src="/images/lifestyle-tray.jpg" alt="waxwick candles" fill sizes="(min-width:768px) 720px, 100vw" className="object-cover" />
+          <Image src="/images/lifestyle-tray.jpg" alt="Wic & Whisper candles" fill sizes="(min-width:768px) 720px, 100vw" className="object-cover" />
         </div>
         <div className="prose mt-10 text-clay-700 text-[16.5px] leading-[1.75] space-y-5">
           <p>
-            waxwick is an independent Indian candle studio based in Bangalore. We make
+            Wic &amp; Whisper is an independent Indian candle studio based in Bangalore. We make
             handcrafted scented candles using natural soy wax, 100% authentic fragrance
             oils, and cotton wicks — nothing else. Every candle is poured by hand,
             tested for clean burn and even melt, and packed in a reusable glass jar

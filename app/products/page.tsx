@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import ProductsClient from './products-client';
 
-export const metadata = { title: 'Shop · waxwick' };
+export const metadata = { title: 'Shop · Wic & Whisper' };
 
 export default function Page() {
   return (

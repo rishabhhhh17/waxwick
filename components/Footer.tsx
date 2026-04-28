@@ -6,8 +6,8 @@ export default function Footer() {
     <footer className="mt-24 bg-clay-900 text-cream-100">
       <div className="mx-auto max-w-7xl px-5 md:px-8 py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-1">
-          <Link href="/" className="font-display text-3xl text-cream-50">
-            waxwick<span className="text-ember-200">.</span>
+          <Link href="/" className="font-display text-3xl text-cream-50 whitespace-nowrap">
+            Wic <span className="italic text-ember-200">&amp;</span> Whisper<span className="text-ember-200">.</span>
           </Link>
           <p className="mt-4 text-sm text-cream-100/75 max-w-xs">
             Hand-poured soy candles from Bangalore. Natural fragrance, slow burn,
@@ -48,14 +48,14 @@ export default function Footer() {
             <li><Link href="/terms" className="hover:text-white">Terms</Link></li>
           </ul>
           <p className="mt-6 text-[13px] text-cream-100/70">
-            Email <a href="mailto:hello@waxwick.in" className="underline">hello@waxwick.in</a> with your order ID for tracking.
+            Email <a href="mailto:hello@wicwhisper.com" className="underline">hello@wicwhisper.com</a> with your order ID for tracking.
           </p>
         </div>
       </div>
 
       <div className="border-t border-cream-100/10">
         <div className="mx-auto max-w-7xl px-5 md:px-8 py-6 text-[12px] text-cream-100/60 flex flex-col md:flex-row gap-2 md:items-center md:justify-between">
-          <span>© {year} waxwick.in · All rights reserved.</span>
+          <span>© {year} Wic &amp; Whisper · All rights reserved.</span>
           <span>Made in India · Hand-poured in Bangalore</span>
         </div>
       </div>

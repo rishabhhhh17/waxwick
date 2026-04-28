@@ -1,4 +1,4 @@
-export const metadata = { title: 'Privacy policy · waxwick' };
+export const metadata = { title: 'Privacy policy · Wic & Whisper' };
 
 export default function PrivacyPage() {
   return (
@@ -8,7 +8,7 @@ export default function PrivacyPage() {
         <div className="mt-6 space-y-4 text-clay-700 text-[15.5px] leading-[1.7]">
           <p>We collect only what we need to fulfil your order: your name, email, phone number, and delivery address.</p>
           <p>Payments are processed by Razorpay; we never see or store your card or UPI details.</p>
-          <p>We use Meta Pixel to measure ad performance. If you’d like your data deleted, email <a className="underline" href="mailto:hello@waxwick.in">hello@waxwick.in</a> from the address on your order.</p>
+          <p>We use Meta Pixel to measure ad performance. If you’d like your data deleted, email <a className="underline" href="mailto:hello@wicwhisper.com">hello@wicwhisper.com</a> from the address on your order.</p>
           <p>We do not sell your personal information to third parties.</p>
         </div>
       </div>

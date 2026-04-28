@@ -37,7 +37,7 @@ export default function AdminLogin() {
     <div className="min-h-[70vh] flex items-center justify-center px-5 py-16">
       <form onSubmit={onSubmit} className="w-full max-w-sm bg-white border border-cream-200 rounded-xl2 p-8">
         <h1 className="font-display text-3xl text-ink">Admin sign-in</h1>
-        <p className="text-[13px] text-clay-700 mt-1.5">waxwick orders dashboard.</p>
+        <p className="text-[13px] text-clay-700 mt-1.5">Wic &amp; Whisper orders dashboard.</p>
         <label className="block mt-6">
           <span className="text-[12px] uppercase tracking-[0.18em] text-clay-700">Password</span>
           <input

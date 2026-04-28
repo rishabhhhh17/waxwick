@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'Contact · waxwick' };
+export const metadata = { title: 'Contact · Wic & Whisper' };
 
 export default function ContactPage() {
   return (
@@ -14,7 +14,7 @@ export default function ContactPage() {
         <div className="mt-10 grid sm:grid-cols-2 gap-6">
           <div className="bg-white border border-cream-200 rounded-xl2 p-6">
             <div className="text-[12px] uppercase tracking-[0.18em] text-clay-700">Email</div>
-            <a href="mailto:hello@waxwick.in" className="font-display text-2xl text-ink mt-1 block hover:text-ember-500">hello@waxwick.in</a>
+            <a href="mailto:hello@wicwhisper.com" className="font-display text-2xl text-ink mt-1 block hover:text-ember-500">hello@wicwhisper.com</a>
             <p className="text-[13px] text-clay-700 mt-2">Best for order support, returns, and hamper enquiries.</p>
           </div>
           <div className="bg-white border border-cream-200 rounded-xl2 p-6">

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'Wholesale & gifting · waxwick' };
+export const metadata = { title: 'Wholesale & gifting · Wic & Whisper' };
 
 export default function WholesalePage() {
   return (
@@ -19,7 +19,7 @@ export default function WholesalePage() {
           <li className="bg-white border border-cream-200 rounded-md p-4">Diwali &amp; Christmas hampers</li>
         </ul>
         <p className="mt-8 text-[14px] text-clay-700">
-          Email <a href="mailto:hello@waxwick.in" className="underline">hello@waxwick.in</a> with quantity, scent preferences, and delivery date — we’ll send a quote within one working day.
+          Email <a href="mailto:hello@wicwhisper.com" className="underline">hello@wicwhisper.com</a> with quantity, scent preferences, and delivery date — we’ll send a quote within one working day.
         </p>
         <Link href="/products" className="btn-primary mt-8 inline-flex">Browse the catalogue</Link>
       </div>

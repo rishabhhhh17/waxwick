@@ -10,9 +10,9 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const p = getProductBySlug(params.slug);
-  if (!p) return { title: 'Not found · waxwick' };
+  if (!p) return { title: 'Not found · Wic & Whisper' };
   return {
-    title: `${p.name} — ${p.tagline} · waxwick`,
+    title: `${p.name} — ${p.tagline} · Wic & Whisper`,
     description: p.description,
   };
 }
