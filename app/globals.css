@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+html, body {
+  background: #fdfaf5;
+  color: #1a120c;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+::selection { background: #f4dfca; color: #1a120c; }
+
+a, button { cursor: pointer; }
+
+.btn {
+  @apply inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember-500 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50 disabled:opacity-50 disabled:cursor-not-allowed;
+  min-height: 44px;
+}
+.btn-primary { @apply btn bg-ember-500 text-white hover:bg-ember-600 active:bg-ember-700 px-6 py-3 shadow-warm; }
+.btn-ghost   { @apply btn bg-transparent text-ink hover:bg-cream-100 px-5 py-3; }
+.btn-outline { @apply btn bg-transparent text-ink border border-ink/15 hover:bg-cream-100 px-6 py-3; }
+.btn-sm      { @apply px-4 py-2 text-sm; min-height: 38px; }
+
+.card {
+  @apply bg-white rounded-xl2 shadow-soft overflow-hidden border border-cream-200;
+}
+
+.kbd-marquee {
+  animation: marquee 28s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  45%      { opacity: 0.92; transform: scale(0.98); }
+  60%      { opacity: 1; transform: scale(1.01); }
+}
+.flicker { animation: flicker 2.6s ease-in-out infinite; transform-origin: bottom center; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
