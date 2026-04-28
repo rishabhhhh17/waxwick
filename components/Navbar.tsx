@@ -115,18 +115,26 @@ export default function Navbar() {
           scrolled ? 'bg-cream-50/95 backdrop-blur-md border-cream-200 shadow-soft' : 'bg-cream-50/80 backdrop-blur-sm border-transparent',
         )}
       >
-        <div className="mx-auto max-w-[1400px] px-5 md:px-8 h-[68px] grid grid-cols-[auto_1fr_auto] items-center gap-6">
-          {/* Mobile menu trigger */}
+        <div className="mx-auto max-w-[1400px] px-5 md:px-8 h-[68px] flex items-center justify-between gap-6">
+          {/* Mobile / tablet menu trigger (hidden once desktop nav appears at lg) */}
           <button
-            className="md:hidden p-2 -ml-2 text-ink hover:bg-cream-100 rounded-full transition-colors"
+            className="lg:hidden p-2 -ml-2 text-ink hover:bg-cream-100 rounded-full transition-colors shrink-0"
             onClick={() => setMobile(true)}
             aria-label="Open menu"
           >
             <Menu className="w-5 h-5" />
           </button>
 
-          {/* Desktop primary nav (left) */}
-          <nav className="hidden md:flex items-center gap-1">
+          {/* Logo — left-aligned, in flow */}
+          <Link
+            href="/"
+            className="font-display text-[26px] md:text-[28px] tracking-[-0.01em] text-ink shrink-0 leading-none whitespace-nowrap"
+          >
+            wax<span className="italic text-ember-500">wick</span><span className="text-ember-500">.</span>
+          </Link>
+
+          {/* Desktop primary nav — between logo and utilities */}
+          <nav className="hidden lg:flex items-center gap-1 flex-1 justify-center">
             {SHOP_MENU.map((g, i) => (
               <button
                 key={g.href}
@@ -134,7 +142,7 @@ export default function Navbar() {
                 onFocus={() => setHoverIdx(i)}
                 onClick={() => { window.location.href = g.href; }}
                 className={cn(
-                  'inline-flex items-center gap-1 px-3 py-2 text-[13.5px] tracking-wide text-clay-700 hover:text-ink rounded-full transition-colors',
+                  'inline-flex items-center gap-1 px-3 py-2 text-[13.5px] tracking-wide text-clay-700 hover:text-ink rounded-full transition-colors whitespace-nowrap',
                   hoverIdx === i && 'text-ink bg-cream-100',
                 )}
               >
@@ -142,26 +150,17 @@ export default function Navbar() {
                 <ChevronDown className={cn('w-3.5 h-3.5 transition-transform', hoverIdx === i && 'rotate-180')} />
               </button>
             ))}
-            <Link href="/about" className="px-3 py-2 text-[13.5px] text-clay-700 hover:text-ink rounded-full">
+            <Link href="/about" className="px-3 py-2 text-[13.5px] text-clay-700 hover:text-ink rounded-full whitespace-nowrap">
               Our story
             </Link>
           </nav>
 
-          {/* Centered logo */}
-          <Link
-            href="/"
-            className="font-display text-[26px] md:text-[28px] tracking-[-0.01em] text-ink justify-self-center md:absolute md:left-1/2 md:-translate-x-1/2"
-          >
-            wax<span className="italic text-ember-500">wick</span>
-            <span className="text-ember-500">.</span>
-          </Link>
-
           {/* Right utilities */}
-          <div className="flex items-center gap-1 justify-self-end">
+          <div className="flex items-center gap-1 shrink-0">
             <Link href="/products" className="hidden md:inline-flex p-2 hover:bg-cream-100 rounded-full text-ink transition-colors" aria-label="Search products">
               <Search className="w-[18px] h-[18px]" />
             </Link>
-            <Link href="/products" className="hidden lg:inline-flex btn-primary btn-sm ml-1">
+            <Link href="/products" className="hidden md:inline-flex btn-primary btn-sm ml-1">
               Shop now
             </Link>
             <button
