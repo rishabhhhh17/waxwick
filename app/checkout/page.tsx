@@ -48,7 +48,7 @@ export default function CheckoutPage() {
 
   function set<K extends keyof typeof form>(k: K, v: string) { setForm((f) => ({ ...f, [k]: v })); }
   const subtotal = subtotalPaise();
-  const shipping = subtotal >= 99900 ? 0 : 6900; // free over ₹999
+  const shipping = 0; // Free shipping on every order.
   const discount = discountPaise(shipping);
   const total = finalTotalPaise(shipping);
 

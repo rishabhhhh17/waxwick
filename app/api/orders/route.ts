@@ -13,8 +13,7 @@ export const dynamic = 'force-dynamic';
 
 type CartLineIn = { variantId: string; qty: number };
 
-const SHIPPING_FREE_OVER = 99900;
-const SHIPPING_FLAT = 6900;
+// Free shipping on every order.
 
 export async function POST(req: Request) {
   let body: {
@@ -70,7 +69,7 @@ export async function POST(req: Request) {
   }
 
   const subtotal_paise = total_paise;
-  const shipping_paise = subtotal_paise >= SHIPPING_FREE_OVER ? 0 : SHIPPING_FLAT;
+  const shipping_paise = 0;
 
   // Re-validate discount server-side — never trust client
   let discount_paise = 0;

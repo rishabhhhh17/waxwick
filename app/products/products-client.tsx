@@ -66,7 +66,7 @@ export default function ProductsClient() {
         </div>
         <p className="text-clay-700 max-w-[52ch] text-[16px] leading-[1.7]">
           Hand-poured soy candles in four collections — pick by scent, by season, or by the room
-          you want to slow down. Free shipping on orders over ₹999.
+          you want to slow down. Free shipping on every order.
         </p>
       </div>
 

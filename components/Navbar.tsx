@@ -62,7 +62,7 @@ const SHOP_MENU: ShopGroup[] = [
 ];
 
 const ANNOUNCE = [
-  '✦ Free shipping on orders over ₹999',
+  '✦ Free shipping on every order',
   '✦ Hand-poured to order in Bangalore',
   '✦ 100% natural soy wax · toxin-free',
 ];
