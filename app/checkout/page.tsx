@@ -38,7 +38,7 @@ export default function CheckoutPage() {
     if (typeof window !== 'undefined' && window.fbq && lines.length > 0) {
       window.fbq('track', 'InitiateCheckout', {
         currency: 'INR',
-        value: subtotalPaise() / 100,
+        value: total / 100,
         content_ids: lines.map((l) => l.productId),
         num_items: lines.reduce((a, l) => a + l.qty, 0),
       });
