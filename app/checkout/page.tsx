@@ -18,7 +18,8 @@ declare global {
 
 export default function CheckoutPage() {
   const router = useRouter();
-  const { lines, subtotalPaise, clear } = useCart();
+  const { lines, subtotalPaise, clear, discountCode, discountPaise, finalTotalPaise } =
+    useCart();
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
 
@@ -48,7 +49,8 @@ export default function CheckoutPage() {
   function set<K extends keyof typeof form>(k: K, v: string) { setForm((f) => ({ ...f, [k]: v })); }
   const subtotal = subtotalPaise();
   const shipping = subtotal >= 99900 ? 0 : 6900; // free over ₹999
-  const total = subtotal + shipping;
+  const discount = discountPaise(shipping);
+  const total = finalTotalPaise(shipping);
 
   async function pay(e: React.FormEvent) {
     e.preventDefault();
@@ -75,6 +77,7 @@ export default function CheckoutPage() {
         body: JSON.stringify({
           items: lines.map((l) => ({ variantId: l.variantId, qty: l.qty })),
           customer: { name: form.name, email: form.email, phone: form.phone },
+          discountCode: discountCode ?? undefined,
           shipping: {
             line1: form.line1, line2: form.line2,
             city: form.city, state: form.state, pincode: form.pincode,
@@ -230,6 +233,9 @@ export default function CheckoutPage() {
             </ul>
             <div className="border-t border-cream-200 mt-5 pt-4 space-y-2 text-[14px]">
               <Row k="Subtotal" v={formatINR(subtotal)} />
+              {discountCode && discount > 0 ? (
+                <Row k={`Discount (${discountCode})`} v={`−${formatINR(discount)}`} />
+              ) : null}
               <Row k="Shipping" v={shipping === 0 ? 'Free' : formatINR(shipping)} />
               <div className="flex justify-between text-ink font-medium border-t border-cream-200 pt-3 mt-3">
                 <span>Total</span>

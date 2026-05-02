@@ -2,17 +2,26 @@ import { NextResponse } from 'next/server';
 import { randomUUID } from 'crypto';
 import { razorpay } from '@/lib/razorpay';
 import { getVariantById } from '@/lib/products';
+import {
+  clampDiscountForMinTotal,
+  computeSystemDiscountAmount,
+  findSystemDiscountCode,
+} from '@/lib/discounts';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 type CartLineIn = { variantId: string; qty: number };
 
+const SHIPPING_FREE_OVER = 99900;
+const SHIPPING_FLAT = 6900;
+
 export async function POST(req: Request) {
   let body: {
     items?: CartLineIn[];
     customer?: { name?: string; email?: string; phone?: string };
     shipping?: Record<string, unknown>;
+    discountCode?: string;
   };
   try {
     body = await req.json();
@@ -60,12 +69,29 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'invalid_total' }, { status: 400 });
   }
 
+  const subtotal_paise = total_paise;
+  const shipping_paise = subtotal_paise >= SHIPPING_FREE_OVER ? 0 : SHIPPING_FLAT;
+
+  // Re-validate discount server-side — never trust client
+  let discount_paise = 0;
+  let appliedCode: string | null = null;
+  if (body.discountCode) {
+    const found = findSystemDiscountCode(body.discountCode);
+    if (found && subtotal_paise >= found.minOrderPaise) {
+      const raw = computeSystemDiscountAmount(found, subtotal_paise);
+      const clamped = clampDiscountForMinTotal(subtotal_paise, raw, shipping_paise);
+      discount_paise = clamped.discount;
+      appliedCode = found.code;
+    }
+  }
+  const final_total = subtotal_paise - discount_paise + shipping_paise;
+
   const event_id = randomUUID();
   const receipt = `wax_${Date.now().toString(36)}`;
 
   try {
     const order = await razorpay().orders.create({
-      amount: total_paise,
+      amount: final_total,
       currency: 'INR',
       receipt,
       notes: {
@@ -74,6 +100,10 @@ export async function POST(req: Request) {
         customer_phone: customer.phone,
         shipping: JSON.stringify(body.shipping ?? {}),
         items: JSON.stringify(line_items),
+        subtotal_paise: String(subtotal_paise),
+        shipping_paise: String(shipping_paise),
+        discount_code: appliedCode ?? '',
+        discount_paise: String(discount_paise),
         event_id,
       },
     });

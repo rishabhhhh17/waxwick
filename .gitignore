@@ -32,3 +32,4 @@ next-env.d.ts
 
 # scratch (we extracted PDF pages here while building — not part of the app)
 extracted_images/
+tsconfig.tsbuildinfo

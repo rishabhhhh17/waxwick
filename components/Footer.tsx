@@ -54,6 +54,14 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-cream-100/10">
+        <div className="mx-auto max-w-7xl px-5 md:px-8 py-5 text-center text-sm text-cream-100">
+          Use code{' '}
+          <span className="font-mono font-semibold text-ember-200">WELCOME15</span>{' '}
+          for <span className="font-semibold">15% off</span> your first order.
+        </div>
+      </div>
+
+      <div className="border-t border-cream-100/10">
         <div className="mx-auto max-w-7xl px-5 md:px-8 py-6 text-[12px] text-cream-100/60 flex flex-col md:flex-row gap-2 md:items-center md:justify-between">
           <span>© {year} Wic &amp; Whisper · All rights reserved.</span>
           <span>Made in India · Hand-poured in Bangalore</span>
